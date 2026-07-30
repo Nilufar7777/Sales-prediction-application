@@ -20,5 +20,5 @@ if st.button("Predict Sales"):
         [[tv, radio, newspaper]],
         columns=columns
     )
-    prediction = final_model.predict(input_df)[0]
+    prediction = model.predict(input_df)[0]
     st.success(f"Predicted Sales: {prediction:.2f} units")
