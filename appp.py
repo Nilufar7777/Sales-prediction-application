@@ -4,7 +4,7 @@ import pandas as pd
 
 # Load the trained model and the exact column names/order used in training
 model = joblib.load("final_model.pkl)
-columns = joblib.load("columns.pkl")
+columns = joblib.load("column_names.pkl")
 
 st.set_page_config(page_title="Sales Prediction", page_icon="📈")
 
