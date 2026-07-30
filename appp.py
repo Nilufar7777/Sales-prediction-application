@@ -18,7 +18,7 @@ newspaper = st.number_input("Newspaper Advertising Budget ($1000s)", value=10.0)
 if st.button("Predict Sales"):
     input_df = pd.DataFrame(
         [[tv, radio, newspaper]],
-        columns=columns_names
+        columns=columns
     )
-    prediction = final_model.pkl.predict(input_df)[0]
+    prediction = final_model.predict(input_df)[0]
     st.success(f"Predicted Sales: {prediction:.2f} units")
