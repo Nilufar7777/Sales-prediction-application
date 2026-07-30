@@ -3,7 +3,7 @@ import joblib
 import pandas as pd
 
 # Load the trained model and the exact column names/order used in training
-model = joblib.load("model.pkl")
+model = joblib.load("final_model.pkl)
 columns = joblib.load("columns.pkl")
 
 st.set_page_config(page_title="Sales Prediction", page_icon="📈")
@@ -20,5 +20,5 @@ if st.button("Predict Sales"):
         [[tv, radio, newspaper]],
         columns=columns
     )
-    prediction = model.predict(input_df)[0]
+    prediction = final_model.pkl.predict(input_df)[0]
     st.success(f"Predicted Sales: {prediction:.2f} units")
